@@ -191,8 +191,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   }
 
   function unique(collection) {
-    return cash(slice.call(collection).filter(function (item, index, self) {
-      return self.indexOf(item) === index;
+    return cash(slice.call(collection).filter(function (item, index.html, self) {
+      return self.indexOf(item) === index.html;
     }));
   }
 
@@ -417,8 +417,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return this;
     },
 
-    eq: function (index) {
-      return cash(this.get(index));
+    eq: function (index.html) {
+      return cash(this.get(index.html));
     },
 
     filter: function (selector) {
@@ -437,14 +437,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return this.eq(0);
     },
 
-    get: function (index) {
-      if (index === undefined) {
+    get: function (index.html) {
+      if (index.html === undefined) {
         return slice.call(this);
       }
-      return index < 0 ? this[index + this.length] : this[index];
+      return index.html < 0 ? this[index.html + this.length] : this[index.html];
     },
 
-    index: function (elem) {
+    index.html: function (elem) {
       var child = elem ? cash(elem)[0] : this[0],
           collection = elem ? this : cash(child).parent().children();
       return slice.call(collection).indexOf(child);
@@ -460,8 +460,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var camelRegex = /(?:^\w|[A-Z]|\b\w)/g,
         whiteSpace = /[\s-_]+/g;
     return function (str) {
-      return str.replace(camelRegex, function (letter, index) {
-        return letter[index === 0 ? "toLowerCase" : "toUpperCase"]();
+      return str.replace(camelRegex, function (letter, index.html) {
+        return letter[index.html === 0 ? "toLowerCase" : "toUpperCase"]();
       }).replace(whiteSpace, "");
     };
   }();
@@ -544,7 +544,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   function removeEvent(node, eventName, callback) {
     var events = getData(node, "_cashEvents"),
         eventCache = events && events[eventName],
-        index;
+        index.html;
 
     if (!eventCache) {
       return;
@@ -552,9 +552,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (callback) {
       node.removeEventListener(eventName, callback);
-      index = eventCache.indexOf(callback);
-      if (index >= 0) {
-        eventCache.splice(index, 1);
+      index.html = eventCache.indexOf(callback);
+      if (index.html >= 0) {
+        eventCache.splice(index.html, 1);
       }
     } else {
       each(eventCache, function (event) {
@@ -2007,12 +2007,12 @@ $jscomp.polyfill = function (e, r, p, m) {
             var $collapsibleLi = $header.closest('li');
             var $collapsibleLis = $collapsible.children('li');
             var isActive = $collapsibleLi[0].classList.contains('active');
-            var index = $collapsibleLis.index($collapsibleLi);
+            var index.html = $collapsibleLis.index.html($collapsibleLi);
 
             if (isActive) {
-              this.close(index);
+              this.close(index.html);
             } else {
-              this.open(index);
+              this.open(index.html);
             }
           }
         }
@@ -2033,15 +2033,15 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       /**
        * Animate in collapsible slide
-       * @param {Number} index - 0th index of slide
+       * @param {Number} index.html - 0th index.html of slide
        */
 
     }, {
       key: "_animateIn",
-      value: function _animateIn(index) {
+      value: function _animateIn(index.html) {
         var _this6 = this;
 
-        var $collapsibleLi = this.$el.children('li').eq(index);
+        var $collapsibleLi = this.$el.children('li').eq(index.html);
         if ($collapsibleLi.length) {
           var $body = $collapsibleLi.children('.collapsible-body');
 
@@ -2088,15 +2088,15 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       /**
        * Animate out collapsible slide
-       * @param {Number} index - 0th index of slide to open
+       * @param {Number} index.html - 0th index.html of slide to open
        */
 
     }, {
       key: "_animateOut",
-      value: function _animateOut(index) {
+      value: function _animateOut(index.html) {
         var _this7 = this;
 
-        var $collapsibleLi = this.$el.children('li').eq(index);
+        var $collapsibleLi = this.$el.children('li').eq(index.html);
         if ($collapsibleLi.length) {
           var $body = $collapsibleLi.children('.collapsible-body');
           anim.remove($body[0]);
@@ -2127,15 +2127,15 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       /**
        * Open Collapsible
-       * @param {Number} index - 0th index of slide
+       * @param {Number} index.html - 0th index.html of slide
        */
 
     }, {
       key: "open",
-      value: function open(index) {
+      value: function open(index.html) {
         var _this8 = this;
 
-        var $collapsibleLi = this.$el.children('li').eq(index);
+        var $collapsibleLi = this.$el.children('li').eq(index.html);
         if ($collapsibleLi.length && !$collapsibleLi[0].classList.contains('active')) {
           // onOpenStart callback
           if (typeof this.options.onOpenStart === 'function') {
@@ -2147,26 +2147,26 @@ $jscomp.polyfill = function (e, r, p, m) {
             var $collapsibleLis = this.$el.children('li');
             var $activeLis = this.$el.children('li.active');
             $activeLis.each(function (el) {
-              var index = $collapsibleLis.index($(el));
-              _this8.close(index);
+              var index.html = $collapsibleLis.index.html($(el));
+              _this8.close(index.html);
             });
           }
 
           // Animate in
           $collapsibleLi[0].classList.add('active');
-          this._animateIn(index);
+          this._animateIn(index.html);
         }
       }
 
       /**
        * Close Collapsible
-       * @param {Number} index - 0th index of slide
+       * @param {Number} index.html - 0th index.html of slide
        */
 
     }, {
       key: "close",
-      value: function close(index) {
-        var $collapsibleLi = this.$el.children('li').eq(index);
+      value: function close(index.html) {
+        var $collapsibleLi = this.$el.children('li').eq(index.html);
         if ($collapsibleLi.length && $collapsibleLi[0].classList.contains('active')) {
           // onCloseStart callback
           if (typeof this.options.onCloseStart === 'function') {
@@ -2175,7 +2175,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           // Animate out
           $collapsibleLi[0].classList.remove('active');
-          this._animateOut(index);
+          this._animateOut(index.html);
         }
       }
     }], [{
@@ -2533,7 +2533,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           })[0];
 
           if (newOptionEl) {
-            this.focusedIndex = $(newOptionEl).index();
+            this.focusedIndex = $(newOptionEl).index.html();
             this._focusFocusedItem();
           }
         }
@@ -3619,7 +3619,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         // Set css on origin
         this.$el.css({
           position: 'absolute',
-          'z-index': 1000,
+          'z-index.html': 1000,
           'will-change': 'left, top, width, height'
         });
 
@@ -3644,7 +3644,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           }
         });
 
-        // Put before in origin image to preserve z-index layering.
+        // Put before in origin image to preserve z-index.html layering.
         this.$el.before(this.$overlay);
 
         // Set dimensions if needed
@@ -4007,7 +4007,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       // Setup
       _this22.$tabLinks = _this22.$el.children('li.tab').children('a');
-      _this22.index = 0;
+      _this22.index.html = 0;
       _this22._setupActiveTabLink();
 
       // Setup tabs content
@@ -4124,13 +4124,13 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         // Make the tab active.
         this.$activeTabLink.addClass('active');
-        var prevIndex = this.index;
-        this.index = Math.max(this.$tabLinks.index(tabLink), 0);
+        var prevIndex = this.index.html;
+        this.index.html = Math.max(this.$tabLinks.index.html(tabLink), 0);
 
         // Swap content
         if (this.options.swipeable) {
           if (this._tabsCarousel) {
-            this._tabsCarousel.set(this.index, function () {
+            this._tabsCarousel.set(this.index.html, function () {
               if (typeof _this23.options.onShow === 'function') {
                 _this23.options.onShow.call(_this23, _this23.$content[0]);
               }
@@ -4203,7 +4203,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.$tabLinks.removeClass('active');
         this.$activeTabLink[0].classList.add('active');
 
-        this.index = Math.max(this.$tabLinks.index(this.$activeTabLink), 0);
+        this.index.html = Math.max(this.$tabLinks.index.html(this.$activeTabLink), 0);
 
         if (this.$activeTabLink.length) {
           this.$content = $(M.escapeHash(this.$activeTabLink[0].hash));
@@ -4237,17 +4237,17 @@ $jscomp.polyfill = function (e, r, p, m) {
         $tabsWrapper.append($tabsContent);
         $tabsContent[0].style.display = '';
 
-        // Keep active tab index to set initial carousel slide
-        var activeTabIndex = this.$activeTabLink.closest('.tab').index();
+        // Keep active tab index.html to set initial carousel slide
+        var activeTabIndex = this.$activeTabLink.closest('.tab').index.html();
 
         this._tabsCarousel = M.Carousel.init($tabsWrapper[0], {
           fullWidth: true,
           noWrap: true,
           onCycleTo: function (item) {
-            var prevIndex = _this25.index;
-            _this25.index = $(item).index();
+            var prevIndex = _this25.index.html;
+            _this25.index.html = $(item).index.html();
             _this25.$activeTabLink.removeClass('active');
-            _this25.$activeTabLink = _this25.$tabLinks.eq(_this25.index);
+            _this25.$activeTabLink = _this25.$tabLinks.eq(_this25.index.html);
             _this25.$activeTabLink.addClass('active');
             _this25._animateIndicator(prevIndex);
             if (typeof _this25.options.onShow === 'function') {
@@ -4347,7 +4347,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       key: "updateTabIndicator",
       value: function updateTabIndicator() {
         this._setTabsAndTabWidth();
-        this._animateIndicator(this.index);
+        this._animateIndicator(this.index.html);
       }
 
       /**
@@ -4361,7 +4361,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         var leftDelay = 0,
             rightDelay = 0;
 
-        if (this.index - prevIndex >= 0) {
+        if (this.index.html - prevIndex >= 0) {
           leftDelay = 90;
         } else {
           rightDelay = 90;
@@ -5552,9 +5552,9 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.el.M_Sidenav = undefined;
         this.el.style.transform = '';
 
-        var index = Sidenav._sidenavs.indexOf(this);
-        if (index >= 0) {
-          Sidenav._sidenavs.splice(index, 1);
+        var index.html = Sidenav._sidenavs.indexOf(this);
+        if (index.html >= 0) {
+          Sidenav._sidenavs.splice(index.html, 1);
         }
       }
     }, {
@@ -6916,7 +6916,7 @@ $jscomp.polyfill = function (e, r, p, m) {
   // Function to update labels of text fields
   M.updateTextFields = function () {
     var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
-    $(input_selector).each(function (element, index) {
+    $(input_selector).each(function (element, index.html) {
       var $this = $(this);
       if (element.value.length > 0 || $(element).is(':focus') || element.autofocus || $this.attr('placeholder') !== null) {
         $this.siblings('label').addClass('active');
@@ -7201,7 +7201,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this40.$slides = _this40.$slider.children('li');
       _this40.activeIndex = _this40.$slides.filter(function (item) {
         return $(item).hasClass('active');
-      }).first().index();
+      }).first().index.html();
       if (_this40.activeIndex != -1) {
         _this40.$active = _this40.$slides.eq(_this40.activeIndex);
       }
@@ -7321,7 +7321,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_handleIndicatorClick",
       value: function _handleIndicatorClick(e) {
-        var currIndex = $(e.target).index();
+        var currIndex = $(e.target).index.html();
         this.set(currIndex);
       }
 
@@ -7332,7 +7332,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_handleInterval",
       value: function _handleInterval() {
-        var newActiveIndex = this.$slider.find('.active').index();
+        var newActiveIndex = this.$slider.find('.active').index.html();
         if (this.$slides.length === newActiveIndex + 1) newActiveIndex = 0;
         // loop to start
         else newActiveIndex += 1;
@@ -7397,7 +7397,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         if (this.options.indicators) {
           this.$indicators = $('<ul class="indicators"></ul>');
-          this.$slides.each(function (el, index) {
+          this.$slides.each(function (el, index.html) {
             var $indicator = $('<li class="indicator-item"></li>');
             _this43.$indicators.append($indicator[0]);
           });
@@ -7418,19 +7418,19 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       /**
        * Cycle to nth item
-       * @param {Number} index
+       * @param {Number} index.html
        */
 
     }, {
       key: "set",
-      value: function set(index) {
+      value: function set(index.html) {
         var _this44 = this;
 
         // Wrap around indices.
-        if (index >= this.$slides.length) index = 0;else if (index < 0) index = this.$slides.length - 1;
+        if (index.html >= this.$slides.length) index.html = 0;else if (index.html < 0) index.html = this.$slides.length - 1;
 
-        // Only do if index changes
-        if (this.activeIndex != index) {
+        // Only do if index.html changes
+        if (this.activeIndex != index.html) {
           this.$active = this.$slides.eq(this.activeIndex);
           var $caption = this.$active.find('.caption');
           this.$active.removeClass('active');
@@ -7459,18 +7459,18 @@ $jscomp.polyfill = function (e, r, p, m) {
           // Update indicators
           if (this.options.indicators) {
             this.$indicators.eq(this.activeIndex).removeClass('active');
-            this.$indicators.eq(index).addClass('active');
+            this.$indicators.eq(index.html).addClass('active');
           }
 
           anim({
-            targets: this.$slides.eq(index)[0],
+            targets: this.$slides.eq(index.html)[0],
             opacity: 1,
             duration: this.options.duration,
             easing: 'easeOutQuad'
           });
 
           anim({
-            targets: this.$slides.eq(index).find('.caption')[0],
+            targets: this.$slides.eq(index.html).find('.caption')[0],
             opacity: 1,
             translateX: 0,
             translateY: 0,
@@ -7479,8 +7479,8 @@ $jscomp.polyfill = function (e, r, p, m) {
             easing: 'easeOutQuad'
           });
 
-          this.$slides.eq(index).addClass('active');
-          this.activeIndex = index;
+          this.$slides.eq(index.html).addClass('active');
+          this.activeIndex = index.html;
 
           // Reset interval
           this.start();
@@ -7753,14 +7753,14 @@ $jscomp.polyfill = function (e, r, p, m) {
         var $chip = $(e.target).closest('.chip');
         var clickedClose = $(e.target).is('.close');
         if ($chip.length) {
-          var index = $chip.index();
+          var index.html = $chip.index.html();
           if (clickedClose) {
             // delete chip
-            this.deleteChip(index);
+            this.deleteChip(index.html);
             this.$input[0].focus();
           } else {
             // select chip
-            this.selectChip(index);
+            this.selectChip(index.html);
           }
 
           // Default handle click to focus on input
@@ -7995,7 +7995,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         var $chip = this.$chips.eq(chipIndex);
         this.$chips.eq(chipIndex).remove();
         this.$chips = this.$chips.filter(function (el) {
-          return $(el).index() >= 0;
+          return $(el).index.html() >= 0;
         });
         this.chipsData.splice(chipIndex, 1);
         this._setPlaceholder();
@@ -8060,12 +8060,12 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           var selectIndex = currChips.chipsData.length;
           if (currChips._selectedChip) {
-            var index = currChips._selectedChip.index();
-            currChips.deleteChip(index);
+            var index.html = currChips._selectedChip.index.html();
+            currChips.deleteChip(index.html);
             currChips._selectedChip = null;
 
             // Make sure selectIndex doesn't go negative
-            selectIndex = Math.max(index - 1, 0);
+            selectIndex = Math.max(index.html - 1, 0);
           }
 
           if (currChips.chipsData.length) {
@@ -8075,7 +8075,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           // left arrow key
         } else if (e.keyCode === 37) {
           if (currChips._selectedChip) {
-            var _selectIndex = currChips._selectedChip.index() - 1;
+            var _selectIndex = currChips._selectedChip.index.html() - 1;
             if (_selectIndex < 0) {
               return;
             }
@@ -8085,7 +8085,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           // right arrow key
         } else if (e.keyCode === 39) {
           if (currChips._selectedChip) {
-            var _selectIndex2 = currChips._selectedChip.index() + 1;
+            var _selectIndex2 = currChips._selectedChip.index.html() + 1;
 
             if (_selectIndex2 >= currChips.chipsData.length) {
               currChips.$input[0].focus();
@@ -8214,8 +8214,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         this._removeEventHandlers();
 
         // Remove pushpin Inst
-        var index = Pushpin._pushpins.indexOf(this);
-        Pushpin._pushpins.splice(index, 1);
+        var index.html = Pushpin._pushpins.indexOf(this);
+        Pushpin._pushpins.splice(index.html, 1);
       }
     }, {
       key: "_setupEventHandlers",
@@ -9472,7 +9472,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * change view to a specific month (zero-index, e.g. 0: January)
+       * change view to a specific month (zero-index.html, e.g. 0: January)
        */
 
     }, {
@@ -10773,7 +10773,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           e.stopPropagation();
           return false;
         } else if (!this.options.fullWidth) {
-          var clickedIndex = $(e.target).closest('.carousel-item').index();
+          var clickedIndex = $(e.target).closest('.carousel-item').index.html();
           var diff = this._wrap(this.center) - clickedIndex;
 
           // Disable clicks if carousel was shifted by click
@@ -10797,7 +10797,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         var indicator = $(e.target).closest('.indicator-item');
         if (indicator.length) {
-          this._cycleTo(indicator.index());
+          this._cycleTo(indicator.index.html());
         }
       }
 
@@ -10893,7 +10893,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       /**
-       * Wrap index
+       * Wrap index.html
        * @param {Number} x
        */
 
@@ -11002,7 +11002,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         if (this.showIndicators) {
           var diff = this.center % this.count;
           var activeIndicator = this.$indicators.find('.indicator-item.active');
-          if (activeIndicator.index() !== diff) {
+          if (activeIndicator.index.html() !== diff) {
             activeIndicator.removeClass('active');
             this.$indicators.find('.indicator-item').eq(diff)[0].classList.add('active');
           }
@@ -11151,15 +11151,15 @@ $jscomp.polyfill = function (e, r, p, m) {
           n = 1;
         }
 
-        var index = this.center + n;
-        if (index >= this.count || index < 0) {
+        var index.html = this.center + n;
+        if (index.html >= this.count || index.html < 0) {
           if (this.noWrap) {
             return;
           }
 
-          index = this._wrap(index);
+          index.html = this._wrap(index.html);
         }
-        this._cycleTo(index);
+        this._cycleTo(index.html);
       }
 
       /**
@@ -11174,16 +11174,16 @@ $jscomp.polyfill = function (e, r, p, m) {
           n = 1;
         }
 
-        var index = this.center - n;
-        if (index >= this.count || index < 0) {
+        var index.html = this.center - n;
+        if (index.html >= this.count || index.html < 0) {
           if (this.noWrap) {
             return;
           }
 
-          index = this._wrap(index);
+          index.html = this._wrap(index.html);
         }
 
-        this._cycleTo(index);
+        this._cycleTo(index.html);
       }
 
       /**
@@ -11840,7 +11840,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             if (selectedOption.length) {
               // Focus selected option in dropdown
               M.keyDown = true;
-              _this71.dropdown.focusedIndex = selectedOption.index();
+              _this71.dropdown.focusedIndex = selectedOption.index.html();
               _this71.dropdown._focusFocusedItem();
               M.keyDown = false;
 
@@ -11872,8 +11872,8 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_addOptionToValueDict",
       value: function _addOptionToValueDict(el, optionEl) {
-        var index = Object.keys(this._valueDict).length;
-        var key = this.dropdownOptions.id + index;
+        var index.html = Object.keys(this._valueDict).length;
+        var key = this.dropdownOptions.id + index.html;
         var obj = {};
         optionEl.id = key;
 

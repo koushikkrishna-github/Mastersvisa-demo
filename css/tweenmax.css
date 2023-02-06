@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 600px;
-  z-index: 1;
+  z-index.html: 1;
 }
 
 .slideshow .slideshow-inner {
@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index.html: 1;
 }
 
 .slideshow .slide {
@@ -32,7 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index.html: 1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -51,7 +51,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index.html: 1;
   background-position: center center;
   background-size: cover;
 }
@@ -68,7 +68,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index.html: 2;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -85,7 +85,7 @@
   position: absolute;
   top: 50%;
   cursor: pointer;
-  z-index: 3;
+  z-index.html: 3;
 }
 
 .slideshow .arrows .prev {

@@ -119,12 +119,12 @@
 			}
 
 			// Minium CSS to make the magic happen
-			$(scrollId).css({'display':'none','position': 'fixed','z-index': '2147483647'});
+			$(scrollId).css({'display':'none','position': 'fixed','z-index.html': '2147483647'});
 
 			// Active point overlay
 			if (o.activeOverlay) {
 				$("body").append("<div id='"+ o.scrollName +"-active'></div>");
-				$(scrollId+"-active").css({ 'position': 'absolute', 'top': o.topDistance+'px', 'width': '100%', 'border-top': '1px dotted '+o.activeOverlay, 'z-index': '2147483647' });
+				$(scrollId+"-active").css({ 'position': 'absolute', 'top': o.topDistance+'px', 'width': '100%', 'border-top': '1px dotted '+o.activeOverlay, 'z-index.html': '2147483647' });
 			}
 
 			// Scroll function
@@ -312,7 +312,7 @@
 				iframe: {
 					patterns: {
 						youtube: {			   
-							index: 'youtube.com',
+							index.html: 'youtube.com',
 							src: 'https://www.youtube.com/embed/SZEflIVnhH8'				
 								}
 							}
@@ -329,7 +329,7 @@
 				iframe: {
 					patterns: {
 						youtube: {			   
-							index: 'youtube.com',
+							index.html: 'youtube.com',
 							src: 'https://www.youtube.com/embed/7e90gBu4pas'				
 								}
 							}
@@ -346,7 +346,7 @@
 				iframe: {
 					patterns: {
 						youtube: {			   
-							index: 'youtube.com',
+							index.html: 'youtube.com',
 							src: 'https://www.youtube.com/embed/0gv7OC9L2s8'					
 								}
 							}

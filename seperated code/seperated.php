@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<!-- index page brands  -->
+<!-- index.html page brands  -->
 
 <!-- BRANDS-2
 			============================================= -->
